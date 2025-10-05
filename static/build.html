@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Planet Crafter</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container" id="container">
+          <div class="img-bg">
+            <img src="Images/Star.jpg" class="image-bg">
+        </div>
+        <div class="content">
+           <div class="first-column">
+            <div class="planet-name-box">
+                <input type="text" class="plant-name-input" id="plant-name-input" placeholder="Enter Your Planet's Name" >
+            </div>
+            <div class="sliders">
+                
+                <div class="title">
+                    <label for="waterLevel">Water Level</label>
+                    <label for="waterLevel" class="sliderValue" id="waterLevelValue"></label>
+                </div> 
+                <input type="range" id="waterLevel" min="0.0" max="1.0" step="0.01" value="0.5">
+                
+                <div class="title">
+                    <label for="temperature">Temperature</label>
+                    <label for="temperature" class="sliderValue" id="temperatureValue"></label> 
+                </div>
+                <input type="range" id="temperature" min="0.0" max="1.0" step="0.01" value="0.5" >
+                
+                <div class="title">
+                    <label for="starType" >Star Type</label>
+                    <label for="starType" class="sliderValue" id="starTypeValue"></label>
+                </div>
+                <input type="range" id="starType" min="0.0" max="1.0" step="0.01" value="0.5">
+                
+                <div class="title">
+                    <label for="atmosphere">Atmosphere</label>
+                    <label for="atmosphere" class="sliderValue" id="atmosphereValue"></label>
+                </div>
+                <input type="range" id="atmosphere" min="0.0" max="1.0" step="0.01" value="0.7">
+                
+                <div class="title">
+                    <label for="gravity">Gravity</label>
+                    <label for="gravity" class="sliderValue" id="gravityValue"></label>
+                </div>
+                <input type="range" id="gravity" min="0.1" max="10.0" step="0.1" value="1.0">
+            </div>
+             <div class="life-indicator-box" id="lifeIndicator">
+                    Life Status: Calculating...
+                </div>
+            
+            
+        </div>
+        <div id="planet-viz">
+            <div class="plant-down">
+                <div class="text-box-msg">fgdgdg</div>
+            </div>
+        </div>
+        
+        
+            <div class="right-space">
+                <div class="right-column" id="right-column">
+                    <center>
+                        <h4 class="loading-text">Loading Similar Exoplanet....</h4>
+                    </center>
+                </div>
+                <div class="ud-btns">
+                    <div class="idiv idiv1" onclick="download()">
+                        <i class="fa-solid fa-download"></i>
+                    </div>
+                </div>
+            </div>
+           </div> 
+        </div>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</body>
+</html>
+

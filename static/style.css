@@ -1,0 +1,395 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+:root {
+    --font-heading: 'Orbitron', sans-serif;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+a {
+    text-decoration: none;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.img-bg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+.image-bg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.con {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 95%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.container .con h1 {
+    color: white;
+    font-size: 52px;
+    font-family: var(--font-heading);
+}
+
+.con p {
+    color: rgb(141, 141, 141);
+    width: 80%;
+    margin: 8px auto 0;
+}
+
+.con button {
+    padding: 15px 40px;
+    border-radius: 4px;
+    font-weight: normal;
+    text-transform: uppercase;
+    transition: all 0.2s ease-in-out;
+    border: none;
+    background: rgb(69, 101, 154);
+    font-size: 14px;
+    color: rgba(241, 241, 241, 0.8);
+    cursor: pointer;
+    width: 30%;
+    margin-top: 0.25cm;
+}
+
+.con button:hover {
+    color: rgba(255, 255, 255, 1);
+    box-shadow: 0 5px 15px rgba(92, 151, 181, 0.4);
+}
+
+.content {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+}
+
+.first-column {
+    /* Use flexbox for vertical stacking of children */
+    display: flex;
+    flex-direction: column;
+    /* Position the column itself on the page */
+    top: 20px;
+    left: 0;
+    width: 23%;
+}
+
+.planet-name-box {
+    width: 100%;
+    background: rgba(40, 40, 40, 0.862);
+    border-radius: 0 15px 0 0;
+    height: 50px;
+    margin-top: 0; /* Remove percentage margin, use padding or fixed margin */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.sliders{
+    color: white;
+    background: rgba(40, 40, 40, 0.862);
+    padding: 20px 25px 30px 25px; /* Adjust padding for consistency */
+    border-radius: 0px 15px 15px 0px;
+    width: 100%;
+    margin-top: 3%;
+}
+
+.sliders input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 90%;
+    background: #323232;
+    height: 4px;
+    border-radius: 2px;
+    transition: background 0.2s ease;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+    height: 4px;
+    background: #323232;
+    border-radius: 2px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 12px;
+    height: 12px;
+    background-color: rgb(32, 138, 237);
+    border-radius: 50%;
+    cursor: pointer;
+    transform: translateY(-30%);
+    transition: background-color 0.2s ease;
+}
+
+.sliders label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: -12px;
+    margin-top: 15px;
+    color: rgb(198, 198, 198);
+}
+
+.title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.2em;
+    margin-bottom: 8px;
+}
+
+label {
+    font-size: 1.2em;
+    margin-top: 10px;
+    color: #f9f9f9;
+}
+
+.sliderValue {
+    font-size: 1em;
+    color: #f9f9f9;
+    margin-left: 10px;
+}
+
+.plant-name-input {
+    height: 50%;
+    background: transparent;
+    border: none;
+    outline: none;
+    padding: 5px;
+    font-size: 16px;
+    text-transform:capitalize;
+    color: rgb(188, 188, 188);
+    margin: 5%;
+    width: 80%;
+}
+.life-indicator-box {
+    width: 100%;
+    margin-top: 15px; 
+    padding: 15px;
+    background: rgba(40, 40, 40, 0.862);
+    color: #fff;  
+    font-family: 'montserrat', sans-serif;  
+    font-size: 16px;
+    text-align: left;
+    border-radius: 0 15px 15px 0;
+}
+
+.life-indicator-box.habitable {
+background: rgba(30, 150, 30, 0.9); /* Green for life */
+}
+
+.life-indicator-box.barren {
+background: rgba(150, 30, 30, 0.9); /* Red for barren */
+}
+
+
+.img-bg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+.image-bg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+
+
+.content {
+    position: relative; /* Establish context for absolute children, if needed, but flex is better */
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    display: flex; 
+    align-items: flex-start;/* Use flexbox to manage children layout */
+}
+
+.first-column {
+    /* Controls column is now Flex item, setting a fixed width */
+    flex-shrink: 0; /* Prevents column from shrinking */
+    width: 300px;
+    display: flex;
+    flex-direction: column; /* Set a specific, practical width (e.g., 300px) */
+    padding-top: 5vh; /* Vertical spacing from top of viewport */
+    z-index: 10;
+}
+#planet-viz {
+    /* Planet visualization takes up the remaining space */
+    position: relative;  /* Fill the remaining width */
+    height: 100%;
+    width: 900px;
+    left:1.14cm;
+    height: 450px;
+    flex-shrink: 0;
+    z-index: 10;
+}
+
+/* Ensure canvas takes up the full space of its parent (planet-viz) */
+canvas { 
+    margin-top: 1cm;
+    display: block; 
+    width: 100% !important; 
+    display: block;
+    height: 100% !important;
+}
+.right-space {
+    flex-shrink: 0; /* Prevents column from shrinking */
+    width:20%; 
+    height: fit-content; /* 50% of the parent (.content) height */
+    margin-top: 5vh; /* Space from the right edge */
+    /* White with slight transparency */
+    z-index: 10;
+    overflow: hidden;
+    background: rgba(40, 40, 40, 0.899);
+    border-radius: 8px;
+    padding: 25px;
+}
+.loading-text{
+    font-weight: normal;
+}
+.right-column , .browse-btn-div{
+    display: block;
+}
+.browse-btn{
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(222, 181, 32);
+    cursor: pointer;
+     width: 98%;
+     justify-self: center;
+     vertical-align: middle;
+}
+.browse-btn:hover{
+     background-color: rgb(188, 153, 26);
+     transition: 0.2s;
+    
+}
+.browse-btn-div{
+    margin-top: 0.6cm;
+    height: fit-content;
+    padding: 10px;
+}
+.right-column h3{
+    color: rgb(239, 209, 109);
+    font-size: 22px;
+}
+.right-column h4{
+    padding-left: 5px;
+    font-size: 16px;
+    margin-top: 8px;
+    color: white;
+}
+.right-column p{
+    padding-left: 0.75cm;
+    margin-top: 5px;
+    font-size: 14px;
+    color: rgb(194, 194, 194);
+}
+.plant-down{
+    width: 100px;
+    height: 15vh;
+    width: 90%;
+    display: flex;
+    background: rgba(40, 40, 40, 0.899);
+  justify-content: center;
+  font-size: 19px;
+  align-items: center; 
+    border-radius: 0 0 25px 25px;
+}
+.text-box-msg{
+    border-radius: 30px;
+    padding: 15px;
+    color: #fff;
+    padding-left: 1cm;
+    width: 95%;
+    overflow: hidden;
+    vertical-align: middle;
+    justify-self: center;
+    
+}
+.text-box-msg h3{
+    font-size: 18px
+}
+.text-box-msg p{
+    font-size: 13.5px;
+    padding-top: 4px;
+    line-height: 18px;
+    word-spacing: 0.2px;
+    color: #c7c7c7;
+    font-family: 'space mono' , sans-serif;
+}
+.right-space .ud-btns{
+    display: block;
+    width: 100%;
+    height: fit-content;
+    padding: 20px;
+}
+.right-space .ud-btns .idiv{
+    padding: 12px;
+    height: fit-content;
+    width: fit-content;
+    float: left;
+    border-radius: 50%;
+    margin-left: 0.35cm;
+    cursor: pointer;
+    background-color: #858585;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+.right-space .ud-btns .idiv1{
+    margin-left: 0;
+}
+.right-space .ud-btns .idiv i{
+    font-size: 17px;
+
+}
+.right-space .ud-btns .idiv:hover{
+    background-color: rgba(202, 202, 89, 0.759);
+}
+.mexco{
+    font-family: sans-serif;
+    font-size: 22px;
+    padding: 15px;
+    text-align: left;
+}
+.card-set{
+    width: 100%;
+    height: fit-content;
+
+}
+.card{
+    width: 23%;
+    height: fit-content;
+    background-color: rgb(246, 229, 199);
+}
