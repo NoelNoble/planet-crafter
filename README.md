@@ -117,7 +117,7 @@ Planet-Crafter
  python server.py
  ```
  3.Open the application
- Navigate to: http://127.0.0.1:5000 or visit the live link at planet-crafter.vercel.app.
+ Navigate to: http://127.0.0.1:5000 or visit the live link at **planet-crafter.vercel.app**
 
 ## 🧪 Example Workflow
 1. Launch the application and click **Create Planet.**
@@ -145,7 +145,7 @@ Planet Crafter aims to help users understand:
 
 ## 👨‍💻 Authors
 **Noel & Robert** 
-Creators of Planet Crafter Built for the **NASA Space Apps Challenge.**
+are the creators of Planet Crafter Built for the **NASA Space Apps Challenge.**
 
 ## 📜 License
 This project is open-source and available under the **MIT License.**
