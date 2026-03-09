@@ -117,7 +117,7 @@ Planet-Crafter
  python server.py
  ```
  3.Open the application
- Navigate to: http://127.0.0.1:5000 or visit the live link [**Here**](planet-crafter.vercel.app)
+ Navigate to: http://127.0.0.1:5000 or visit the live link [**Here**](https://planet-crafter.vercel.app)
 
 ## 🧪 Example Workflow
 1. Launch the application and click **Create Planet.**
